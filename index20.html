@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Shopping cart</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+		
+		<link rel="stylesheet" href="script.css">
+		</META>
+		</head>
+<body>
+	
+	   
+		<span><i class="shopping-cart">0 products</i></span>
+		 <h1><font size="4">Sofit Chocolate Milk</font></h1>
+		 <div class="item">
+		  <img src="http://cdn.shopify.com/s/files/1/0886/4942/products/SOYA_20CHOCOLATE_20200G_compact.jpeg?v=1438454489" alt="item" />
+			 <h3>Tetrapack 1.0 Lt<h4 id="h4item1">			 </h4>
+         <span id="org1"><del>₹99</del></span>
+			 <h5>1
+			<select id="selected" autofocus>
+		
+				<option value="1.0lt">1.0Lt</option>
+				<option value="500.0ml">500.0ml</option>
+				<option value="200.0ml">200.0ml</option>
+			</select>
+		   </h5>
+			 </h3>
+		 <button class="add-to-cart" type="button" onclick="items()"> <img src="http://cdn1.iconfinder.com/data/icons/jigsoar-icons/24/_cart.png">BUY</button>
+			 <p><a id="clicks">0 products</a></p>
+	      </div>
+	
+	
+			<span><i class="shopping-cart1"></i></span>
+			 <h1 id="item2"><font size="4">Sofit Kesar Pista Milk</font></h1>
+            <div class="item" id="item1">
+		  <img src="data:image/jpeg;base64,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" alt="item2" />
+				<h3 id="kesar">Tetrapack 1.0 Lt<h4 id="h4item2"></h4>
+					<span id="org"><del>₹99</del></span>
+			 <h5 id="h5item2">1
+			<select id="selects" autofocus>
+		
+				<option value="1.0Lt">1.0Lt</option>
+				<option value="500.0ml">500.0ml</option>
+				<option value="200.0ml">200.0ml</option>
+			</select>
+		   </h5>
+			 </h3>
+		 <button class="add-to-cart" type="button" onclick="items()" id="botton"> <img src="http://cdn1.iconfinder.com/data/icons/jigsoar-icons/24/_cart.png">BUY</button>
+				<p><a id="clicks"></a></p>
+				</div>
+	
+
+   
+									 
+	
+        
+		
+		
+    
+   
+
+	
+
+<script>
+
+$('.add-to-cart').on('click', function () {
+        var cart = $('.shopping-cart');
+        var imgtodrag = $(this).parent(".item").find("img").eq(0);
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            })
+                .css({
+                'opacity': '0.5',
+                    'position': 'absolute',
+                    'height': '150px',
+                    'width': '150px',
+                    'z-index': '100'
+            })
+                .appendTo($('body'))
+                .animate({
+                'top': cart.offset().top + 10,
+                    'left': cart.offset().left + 10,
+                    'width': 75,
+                    'height': 75
+            }, 1000, 'easeInElastic');
+            
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 1
+                }, 200);
+            }, 1500);
+
+            imgclone.animate({
+                'width': 0,
+                    'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+});
+	
+	    $("#selected").change(function(){
+			if( $(this).val() == '500.0ml')
+		     $("#h4item1").html("₹95");
+			else if($(this).val() == '200.0ml') 
+			 $("#h4item1").html("₹90");
+		 });
+        
+	
+	
+	      $("#selects").change(function(){
+			if( $(this).val() == '500.0ml')
+		     $("#h4item2").html("₹95");
+			else if($(this).val() == '200.0ml') 
+			 $("#h4item2").html("₹90");
+		 });
+	
+	
+	
+	  	  var clicks = 0;
+	function items() {
+		clicks += 1;
+		
+		document.getElementById("clicks").textContent = clicks +"products"; 
+
+
+	}
+	 
+	
+	
+			
+
+	
+	
+	</script> 
+
+	</body>
+</html>
